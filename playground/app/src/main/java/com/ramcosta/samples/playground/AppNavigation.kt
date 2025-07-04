@@ -210,6 +210,7 @@ fun SampleAppAnimatedNavHostExample(
                 bottomSheetComposable(ThemeSettingsDestination) {
                     ThemeSettings(
                         viewModel = viewModel(),
+                        navigator = destinationsNavigator(navController),
                         resultNavigator = resultBackNavigator(navController, serializableExampleWithNavTypeSerializerNavType)
                     )
                 }

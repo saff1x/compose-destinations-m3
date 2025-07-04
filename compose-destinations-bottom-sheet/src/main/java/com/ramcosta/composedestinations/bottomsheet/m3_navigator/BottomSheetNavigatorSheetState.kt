@@ -65,7 +65,7 @@ public class BottomSheetNavigatorSheetState  constructor(private val sheetState:
  */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-public fun rememberBottomSheetNavigator(
+public fun rememberM3BottomSheetNavigator(
     skipPartiallyExpanded: Boolean = false,
     confirmValueChange: (SheetValue) -> Boolean = { true },
 ): M3BottomSheetNavigator {
@@ -266,7 +266,11 @@ public class M3BottomSheetNavigator(
     }
 
     override fun popBackStack(popUpTo: NavBackStackEntry, savedState: Boolean) {
-        state.pop(popUpTo, savedState)
+        if (backStack.value.lastOrNull() == popUpTo && sheetState.isVisible) {
+            animateToDismiss() // plays sheetState.hide(), waits, then pops
+        } else {
+            state.pop(popUpTo, savedState) // normal pop for deeper entries
+        }
     }
 
     /**
