@@ -25,6 +25,8 @@ composeMaterial = "1.8.0"
 composeNavigationMaterial = "1.8.0"
 composeNavigation = "2.8.9"
 
+material3 = "1.4.0-alpha16"
+
 ktxSerialization = "1.8.1"
 pprint = "1.1.0"
 mockk = "1.14.2"
@@ -58,6 +60,7 @@ compose-material-icons = { module = "androidx.compose.material:material-icons-co
 compose-material-navigation = { module = "androidx.compose.material:material-navigation", version.ref = "composeNavigationMaterial" }
 compose-navigation = { module = "androidx.navigation:navigation-compose", version.ref = "composeNavigation" }
 compose-viewModel = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "composeViewModel" }
+material3 = { module = "androidx.compose.material3:material3", version.ref = "material3" }
 
 pprint = { module = "io.exoquery:pprint-kotlin", version.ref = "pprint" }
 

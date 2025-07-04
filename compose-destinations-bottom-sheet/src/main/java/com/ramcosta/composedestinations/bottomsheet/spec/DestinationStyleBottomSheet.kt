@@ -10,6 +10,8 @@ import androidx.navigation.NavBackStackEntry
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.get
+import com.ramcosta.composedestinations.bottomsheet.m3_navigator.M3BottomSheetNavigator
+import com.ramcosta.composedestinations.bottomsheet.m3_navigator.M3BottomSheetNavigatorDestinationBuilder
 import com.ramcosta.composedestinations.bottomsheet.scope.BottomSheetDestinationScopeImpl
 import com.ramcosta.composedestinations.manualcomposablecalls.DestinationLambda
 import com.ramcosta.composedestinations.manualcomposablecalls.ManualComposableCalls
@@ -49,8 +51,8 @@ object DestinationStyleBottomSheet : DestinationStyle() {
         val contentWrapper = manualComposableCalls[destination.route] as? DestinationLambda<T>?
 
         destination(
-            BottomSheetNavigatorDestinationBuilder(
-                navigator = provider[BottomSheetNavigator::class],
+            M3BottomSheetNavigatorDestinationBuilder(
+                navigator = provider[M3BottomSheetNavigator::class],
                 route = destination.route,
                 content = { navBackStackEntry ->
                     CallComposable(

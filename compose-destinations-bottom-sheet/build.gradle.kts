@@ -53,4 +53,5 @@ dependencies {
     implementation(project(mapOf("path" to ":compose-destinations")))
 
     api(libs.compose.material.navigation)
+    api(libs.material3)
 }
