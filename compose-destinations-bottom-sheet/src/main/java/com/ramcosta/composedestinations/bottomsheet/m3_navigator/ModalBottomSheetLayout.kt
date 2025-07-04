@@ -28,6 +28,7 @@ fun M3ModalBottomSheetLayout(
     containerColor: Color = BottomSheetDefaults.ContainerColor,
     contentColor: Color = contentColorFor(containerColor),
     tonalElevation: Dp = BottomSheetDefaults.Elevation,
+    sheetDragGesturesEnabled: () -> Boolean = { true },
     scrimColor: Color = BottomSheetDefaults.ScrimColor,
     dragHandle: @Composable (() -> Unit)? = { BottomSheetDefaults.DragHandle() },
     contentWindowInsets: @Composable () -> WindowInsets = { BottomSheetDefaults.windowInsets },
@@ -64,6 +65,7 @@ fun M3ModalBottomSheetLayout(
             dragHandle = dragHandle,
             contentWindowInsets = contentWindowInsets,
             properties = properties,
+            sheetGesturesEnabled = sheetDragGesturesEnabled()
         )
     }
 }
