@@ -3,7 +3,7 @@ apply plugin: "com.vanniktech.maven.publish"
 def tag = "git describe --tags --abbrev=0".execute().text.trim()
 
 group = "io.github.raamcosta.compose-destinations"
-version = "2.2.0-fork"
+version = tag
 
 mavenPublishing {
     publishToMavenCentral("S01")
