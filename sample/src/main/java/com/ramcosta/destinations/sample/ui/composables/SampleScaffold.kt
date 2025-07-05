@@ -36,7 +36,7 @@ fun SampleScaffold(
     // 👇 only for debugging, you shouldn't use currentBackStack API as it is restricted by annotation
     navController.currentBackStack.collectAsState().value.print()
 
-    val bottomSheetNavigator = rememberM3BottomSheetNavigator()
+    val bottomSheetNavigator = rememberM3BottomSheetNavigator(navController)
     navController.navigatorProvider += bottomSheetNavigator
 
     // 👇 ModalBottomSheetLayout is only needed if some destination is bottom sheet styled

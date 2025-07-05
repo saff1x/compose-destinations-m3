@@ -22,6 +22,7 @@ import com.ramcosta.composedestinations.navigation.DestinationsNavigator
 import com.ramcosta.composedestinations.result.ResultBackNavigator
 import com.ramcosta.samples.playground.commons.SettingsGraph
 import com.ramcosta.samples.playground.commons.requireTitle
+import com.ramcosta.samples.playground.ui.screens.destinations.TestDestination
 import com.ramcosta.samples.playground.ui.screens.destinations.ThemeSettingsDestination
 import com.ramcosta.samples.playground.ui.screens.profile.SerializableExampleWithNavTypeSerializer
 
@@ -56,7 +57,7 @@ fun ColumnScope.ThemeSettings(
             ) {
                 Text("Go back with result")
             }
-            Spacer(modifier = Modifier.height(30.dp))
+            Spacer(modifier = Modifier.height(16.dp))
 
             Button(
                 onClick = {
@@ -64,6 +65,16 @@ fun ColumnScope.ThemeSettings(
                 }
             ) {
                 Text("Go back")
+            }
+
+            Spacer(modifier = Modifier.height(16.dp))
+
+            Button(
+                onClick = {
+                    navigator.navigate(TestDestination)
+                }
+            ) {
+                Text("Test Navigate")
             }
         }
     }

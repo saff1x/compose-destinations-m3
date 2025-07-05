@@ -26,12 +26,13 @@ settings(["SettingsGraph"]) -- "start" --- settings_screen("SettingsScreen")
 settings(["SettingsGraph"]) --- another_test_screen("AnotherTestScreen")
 settings(["SettingsGraph"]) --- other_activity("OtherActivity")
 settings(["SettingsGraph"]) --- settings/stats_screen("StatsScreen")
+settings(["SettingsGraph"]) --- test("Test")
 settings(["SettingsGraph"]) --- theme_settings("ThemeSettings")
 
 click feature_x_nav_g "FeatureXNavGraph.mmd" "See FeatureXGraph details" _blank
 click feature_y_nav_g "FeatureYNavGraph.mmd" "See FeatureYGraph details" _blank
 
 classDef destination fill:#5383EC,stroke:#ffffff;
-class another_test_screen,feature_z_home_destination,feature_z_second_screen_destination,feed,go_to_profile_confirmation,greeting_screen,other_activity,profile_screen,profile_settings/profile_settings_screen,public_feature_y_side_screen_destination,public_feature_z_side_screen_destination,root/profile_settings_screen,root/stats_screen,settings/stats_screen,settings_screen,test_screen,test_screen2,test_screen3,theme_settings destination;
+class another_test_screen,feature_z_home_destination,feature_z_second_screen_destination,feed,go_to_profile_confirmation,greeting_screen,other_activity,profile_screen,profile_settings/profile_settings_screen,public_feature_y_side_screen_destination,public_feature_z_side_screen_destination,root/profile_settings_screen,root/stats_screen,settings/stats_screen,settings_screen,test,test_screen,test_screen2,test_screen3,theme_settings destination;
 classDef navgraph fill:#63BC76,stroke:#ffffff;
 class feature_x_nav_g,feature_y_nav_g,profile,profile,profile_settings,profile_settings,root,settings,settings navgraph;

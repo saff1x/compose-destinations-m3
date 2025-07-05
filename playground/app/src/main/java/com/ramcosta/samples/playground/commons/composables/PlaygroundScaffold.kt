@@ -40,7 +40,7 @@ fun PlaygroundScaffold(
     //Just for me to debug, ignore this line
     LogBackStack(navController)
 
-    val bottomSheetNavigator = rememberM3BottomSheetNavigator()
+    val bottomSheetNavigator = rememberM3BottomSheetNavigator(navController)
     navController.navigatorProvider += bottomSheetNavigator
 
     M3ModalBottomSheetLayout(

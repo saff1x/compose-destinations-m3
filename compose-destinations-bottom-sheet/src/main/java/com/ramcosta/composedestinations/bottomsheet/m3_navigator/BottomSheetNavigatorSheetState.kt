@@ -148,6 +148,8 @@ public class M3BottomSheetNavigator(
     internal var onDismissRequest: () -> Unit = {}
 
     private var animateToDismiss: () -> Unit = {}
+    public var hideForNavigate: suspend () -> Unit = {}
+        private set
 
 
     internal val sheetInitializer: @Composable () -> Unit = {
@@ -227,6 +229,11 @@ public class M3BottomSheetNavigator(
                             onDismissRequest()
                         }
                 }
+
+                hideForNavigate = {
+                    sheetState.hide()
+                    onDismissRequest()
+                }
             }
 
             BackHandler {
@@ -238,6 +245,7 @@ public class M3BottomSheetNavigator(
                 sheetContent = {}
                 onDismissRequest = {}
                 animateToDismiss = {}
+                hideForNavigate = {}
             }
         }
 
